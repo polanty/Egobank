@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>EgoBank</title>
+  </head>
+  <body>
+    <nav class="login">
+      <p class="login__message">Log in to get started</p>
+      <div class="logo"><span class="logo__design">Ego</span>Bank</div>
+      <form action="" class="login__form">
+        <input
+          type="text"
+          placeholder="Enter your Username"
+          class="login__input login__username"
+        />
+        <input
+          type="text"
+          placeholder="Enter your Password"
+          class="login__input login__pin"
+        />
+        <button class="login__signin">&rarr;</button>
+      </form>
+    </nav>
+
+    <main class="app__page">
+      <section class="signup">
+        <div class="signup__page">
+          <div class="row">
+            <p class="signup__label">Signup for EgoBank</p>
+            <form action="" class="form">
+              <!--firstname-->
+              <div class="form__group">
+                <label for="firstname" class="form__label">Firstname</label>
+                <input
+                  type="text"
+                  id="firstname"
+                  name="firstname"
+                  placeholder="Enter Firstname"
+                  class="form__input"
+                />
+              </div>
+
+              <!-- lastname -->
+              <div class="form__group">
+                <label for="lastname" class="form__label">Lastname</label>
+                <input
+                  type="text"
+                  id="lastname"
+                  name="lastname"
+                  placeholder="Enter Surname"
+                  class="form__input"
+                />
+              </div>
+
+              <!-- createpin -->
+              <div class="form__group">
+                <label for="accountpin" class="form__label">Pin</label>
+                <input
+                  type="text"
+                  id="accountpin"
+                  name="accountpin"
+                  placeholder="Enter Pin"
+                  class="form__input"
+                />
+              </div>
+
+              <!--createpin-->
+              <div class="form__group">
+                <label for="accountpincheck" class="form__label"
+                  >Confirm pin</label
+                >
+                <input
+                  type="text"
+                  id="accountpincheck"
+                  name="accountpincheck"
+                  placeholder="Confirm Pin"
+                  class="form__input"
+                />
+              </div>
+              <button class="form__btn">Sign Up</button>
+            </form>
+            <p class="signup__terms">
+              I agree to abide by EgoBank term of service and privacy policy
+            </p>
+          </div>
+          <div class="signup__image"></div>
+        </div>
+      </section>
+      <!-- Bank account section -->
+      <section class="account">
+        <div class="account__details">
+          <div class="account__balance">
+            <p class="account__balance-label">Internet Banking</p>
+            <div class="banner">
+              <p class="account__balance-date">
+                As of <span class="date">05/03/2037</span>
+              </p>
+
+              <p class="account__balance-value">0000€</p>
+            </div>
+          </div>
+        </div>
+        <div class="account__movements">
+          <div class="account__movements-row">
+            <div
+              class="account__movements-type account__movements-type--deposit"
+            >
+              2 deposit
+            </div>
+            <div class="account__movements-date">3 days ago</div>
+            <div class="account__movements-value">4000€</div>
+          </div>
+          <div class="account__transaction-description">
+            <p class="transaction__details transaction__details-deposit">
+              You Just Received 4000€ from Ade on 21st oct, 2020 with trasaction
+              Id 56789900
+            </p>
+            <p class="transaction__dates">
+              Wednesday, December 30, 2022 22:40:0
+            </p>
+          </div>
+
+          <div class="account__movements-row">
+            <div
+              class="account__movements-type account__movements-type--withdrawal"
+            >
+              1 withdrawal
+            </div>
+            <div class="account__movements-date">24/01/2037</div>
+            <div class="account__movements-value">-378€</div>
+          </div>
+
+          <div class="account__transaction-description">
+            <p class="transaction__details transaction__details-withdrawal">
+              You Just Sent 378€ To Ade on 21st oct, 2020 with trasaction Id
+              56789900
+            </p>
+            <p class="transaction__dates transaction__details">
+              Wednesday, December 30, 2022 22:40:0
+            </p>
+          </div>
+        </div>
+
+        <!--account summary -->
+
+        <div class="account__summary">ACCount Summary</div>
+        <div class="account__Operations">
+          <div class="account__Operations--tabs">
+            <button
+              class="operation__tab operation__tab--1 operation__tab--active"
+              data-tab="1"
+            >
+              <span class="operation__tab--text"> 1</span>
+              Transfer
+            </button>
+            <button class="operation__tab operation__tab--2" data-tab="2">
+              <span class="operation__tab--text">2 </span> Request loan
+            </button>
+            <button class="operation__tab operation__tab--3" data-tab="3">
+              <span class="operation__tab--text">3 </span>Beneficiaries list
+            </button>
+          </div>
+          <div
+            class="account__Operations--content account__Operations--transfer account__Operations--1 account__Operations--active"
+          >
+            <p class="Operations__header">Transfer Out</p>
+            <form
+              action="#"
+              class="Operation__action operation__transfer form__group"
+            >
+              <label for="fname" class="form__label">Transfer To</label>
+              <input type="text" id="fname" name="fname" class="form__input" />
+              <label for="amount" class="form__label">Amount</label>
+              <input type="text" id="amount" name="lname" class="form__input" />
+              <a href="#" type="Submit" class="btn submit-btn">Submit</a>
+            </form>
+          </div>
+          <div
+            class="account__Operations--content account__Operations--Loan account__Operations--2"
+          >
+            <p class="Operations__header">Request Loan</p>
+            <form
+              action="#"
+              class="Operation__action operation__transfer form__group"
+            >
+              <label for="loan-amount" class="form__label">Loan Amount</label>
+              <input
+                type="number"
+                id="loan-amount"
+                name="loan-amount"
+                class="form__input"
+              />
+              <a href="#" type="Submit" class="btn submit-btn">Submit</a>
+            </form>
+          </div>
+          <div
+            class="account__Operations--content account__Operations--beneficiaries account__Operations--3"
+          >
+            <ul class="Beneficiary-list">
+              <li class="Beneficiary-list--person">
+                <div class="Beneficiary-list--container">
+                  <p class="person-details person-name">
+                    ADE Fashin - 657888 - KMD
+                  </p>
+                  <p class="person-details person-bank">
+                    KUDA MICRO BANK - 657888
+                  </p>
+                </div>
+                <span class="delete"
+                  ><a href="#" class="Beneficiacry-romove--btn"
+                    >&#10005;</a
+                  ></span
+                >
+              </li>
+              <li class="Beneficiary-list--person">
+                <div class="Beneficiary-list--container">
+                  <p class="person-details person-name">
+                    ADE Fashin - 657888 - KMD
+                  </p>
+                  <p class="person-details person-bank">
+                    KUDA MICRO BANK - 657888
+                  </p>
+                </div>
+                <span class="delete"
+                  ><a href="#" class="Beneficiacry-romove--btn"
+                    >&#10005;</a
+                  ></span
+                >
+              </li>
+              <li class="Beneficiary-list--person">
+                <div class="Beneficiary-list--container">
+                  <p class="person-details person-name">
+                    ADE Fashin - 657888 - KMD
+                  </p>
+                  <p class="person-details person-bank">
+                    KUDA MICRO BANK - 657888
+                  </p>
+                </div>
+                <span class="delete"
+                  ><a href="#" class="Beneficiacry-romove--btn"
+                    >&#10005;</a
+                  ></span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="logout-timer">
+          You will be logged out in <span class="timer">05:00</span>
+        </p>
+      </section>
+    </main>
+
+    <script src="./script/main.js"></script>
+  </body>
+</html>

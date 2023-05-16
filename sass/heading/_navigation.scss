@@ -1,0 +1,36 @@
+.login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 5rem;
+  padding: 0 2rem;
+  background-color: #f3f3f3;
+
+  &__message {
+    font-size: 1.5rem;
+  }
+
+  &__input {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 2px;
+    font-family: "Open sans", sans-serif;
+    border: none;
+    border: 1px solid #fff;
+
+    &:focus {
+      outline: none;
+      border: 1px solid #ccc;
+      box-shadow: 0.5px 2px 2px rgba($color: #000000, $alpha: 0.2);
+    }
+
+    &::placeholder {
+      color: rgb(0, 0, 0);
+    }
+
+    &:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+  }
+}

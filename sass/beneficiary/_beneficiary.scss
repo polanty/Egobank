@@ -1,0 +1,32 @@
+.Beneficiary {
+  &-list {
+    &--person {
+      padding: 1rem 1.5rem;
+      font-family: inherit;
+
+      display: flex;
+      //flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #dd4f05;
+      }
+    }
+  }
+}
+
+.person {
+  &-details {
+    color: black;
+    font-size: 1.2rem;
+  }
+
+  &-name {
+    font-weight: 500;
+  }
+
+  &-bank {
+    font-weight: 400;
+  }
+}

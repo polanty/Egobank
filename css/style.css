@@ -1,0 +1,317 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: inherit;
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  height: 100vh;
+  padding: 2rem; }
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: 500;
+  background-color: #dd4f05; }
+  .logo__design {
+    color: floralwhite; }
+
+.login__signin {
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  background-color: transparent;
+  cursor: pointer; }
+
+.row {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; }
+
+.signup {
+  width: 100%;
+  height: 100vh;
+  padding: 1rem;
+  display: none; }
+  .signup__page {
+    max-width: 120rem;
+    min-height: 50rem;
+    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    grid-row: auto; }
+  .signup__image {
+    height: 100%;
+    background-image: url(/image/undraw_visual_data_re_mxxo.svg);
+    background-size: contain; }
+  .signup__label {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    display: block;
+    font-family: "Open Sans", sans-serif; }
+  .signup__terms {
+    font-size: 1.2rem;
+    font-family: inherit;
+    color: #696f73; }
+
+.form {
+  flex-grow: 1; }
+  .form > * {
+    width: 100%; }
+  .form__group {
+    display: block; }
+    .form__group:not(:last-child) {
+      margin-bottom: 1rem; }
+  .form__label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-family: inherit;
+    font-size: 1.5rem; }
+  .form__input {
+    height: 3rem;
+    border: none;
+    border: 1px solid #696f73;
+    border-radius: 5px;
+    padding: 0.5rem;
+    display: block; }
+    .form__input:focus {
+      outline: none;
+      box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.3); }
+    .form__input::placeholder {
+      font-family: inherit;
+      font-size: 1.2rem; }
+  .form__btn {
+    height: 3.5rem;
+    background-color: #dd4f05;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 300;
+    border: none;
+    cursor: pointer; }
+    .form__btn:hover {
+      background-color: #ce4a05; }
+
+.account {
+  max-width: 100rem;
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  grid-template-rows: auto repeat(3, 15rem) auto;
+  grid-gap: 2rem; }
+  .account__details {
+    grid-column: 1 / -1; }
+  .account__balance-label {
+    font-size: 2rem;
+    color: black;
+    font-family: inherit; }
+  .account__balance-date {
+    width: 25%;
+    background-color: #dd4f05;
+    color: white;
+    padding: 1rem;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 500; }
+  .account__balance-value {
+    font-family: inherit;
+    font-size: 2rem; }
+  .account__movements {
+    background-color: #e9e9e9;
+    border-radius: 1rem;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border: 1px solid #696f73;
+    grid-row: 2 / span 3;
+    overflow-y: scroll;
+    position: relative; }
+    .account__movements-row {
+      width: 100%;
+      height: 6rem;
+      background-color: white;
+      border-bottom: 1px solid #ccc;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+    .account__movements-type {
+      padding: 0.5rem 1rem;
+      color: white;
+      font-size: 1rem;
+      font-weight: 500;
+      border-radius: 2rem;
+      text-transform: uppercase; }
+      .account__movements-type--deposit {
+        background-image: linear-gradient(to top left, lime, green); }
+      .account__movements-type--withdrawal {
+        background-image: linear-gradient(to top left, #ff6565, #f80000); }
+    .account__movements-date, .account__movements-value {
+      color: #444;
+      font-size: 1.2rem; }
+    .account__movements-value {
+      font-size: 1.5rem;
+      font-weight: 500; }
+  .account__summary {
+    background-color: #035a5a;
+    grid-column: 1 / 2; }
+  .account__Operations {
+    grid-column: 2 / -1;
+    grid-row: 2 / -1; }
+  .account__transaction-description {
+    height: 0rem;
+    border-bottom: 1px solid #dd4f05;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    background-color: white;
+    color: #444;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 0.5s ease-out; }
+    .account__transaction-description > * {
+      display: block;
+      width: 100%; }
+    .account__transaction-description.active {
+      height: 5rem;
+      opacity: 1;
+      visibility: visible; }
+
+.banner {
+  width: 100%;
+  padding-right: 2rem;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.account__Operations--tabs {
+  height: 4rem;
+  width: 100%;
+  display: flex; }
+
+.account__Operations--content {
+  display: none; }
+
+.account__Operations--active {
+  display: block;
+  padding: 2rem; }
+
+.account__Operations--transfer {
+  height: calc(100% - 4rem); }
+
+.account__Operations--Loan {
+  height: calc(100% - 4rem); }
+
+.account__Operations--beneficiaries {
+  height: calc(100% - 4rem);
+  overflow-y: scroll; }
+
+.operation__tab {
+  height: inherit;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid transparent;
+  transition: all ease-out;
+  flex-grow: 1; }
+  .operation__tab:not(:last-child) {
+    border-right: 1px solid #ccc; }
+  .operation__tab--active {
+    background-color: #dd4f05;
+    color: white; }
+  .operation__tab--text {
+    margin-right: 1rem;
+    font-weight: 600;
+    display: inline-block; }
+
+.login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  padding: 0 2rem;
+  background-color: #f3f3f3; }
+  .login__message {
+    font-size: 1.5rem; }
+  .login__input {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 2px;
+    font-family: "Open sans", sans-serif;
+    border: none;
+    border: 1px solid #fff; }
+    .login__input:focus {
+      outline: none;
+      border: 1px solid #ccc;
+      box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.2); }
+    .login__input::placeholder {
+      color: black; }
+    .login__input:not(:last-child) {
+      margin-right: 0.5rem; }
+
+.Operations__header {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 2rem; }
+
+.btn,
+.btn:active,
+.btn:visited {
+  display: inline-block;
+  padding: 1rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: #dd4f05;
+  color: white;
+  transition: opacity;
+  font-family: inherit;
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 1px; }
+  .btn:hover,
+  .btn:active:hover,
+  .btn:visited:hover {
+    background-color: #ce4a05; }
+
+.submit-btn {
+  margin-top: 1rem;
+  width: 46%; }
+
+.Beneficiary-list--person {
+  padding: 1rem 1.5rem;
+  font-family: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .Beneficiary-list--person:not(:last-child) {
+    border-bottom: 1px solid #dd4f05; }
+
+.person-details {
+  color: black;
+  font-size: 1.2rem; }
+
+.person-name {
+  font-weight: 500; }
+
+.person-bank {
+  font-weight: 400; }

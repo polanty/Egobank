@@ -1,0 +1,30 @@
+.Operations__header {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.btn,
+.btn:active,
+.btn:visited {
+  display: inline-block;
+  padding: 1rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: #dd4f05;
+  color: white;
+  transition: opacity;
+  font-family: inherit;
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+
+  &:hover {
+    background-color: #ce4a05;
+  }
+}
+
+.submit-btn {
+  margin-top: 1rem;
+  width: 46%;
+}

@@ -1,0 +1,14 @@
+{
+  "name": "egobank",
+  "version": "1.0.0",
+  "description": "banking app",
+  "main": "index.js",
+  "scripts": {
+    "compile-sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "polanty",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  }
+}

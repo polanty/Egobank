@@ -1,0 +1,352 @@
+.logo {
+  font-size: 2.5rem;
+  font-weight: 500;
+  background-color: #dd4f05;
+  // align-self: stretch;
+
+  &__design {
+    color: floralwhite;
+  }
+}
+
+.login {
+  &__signin {
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
+
+.row {
+  // background-color: coral;
+  padding: 2rem 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// .app {
+//   &__page {
+//     // background-color: #f3f3f3;
+//   }
+// }
+.signup {
+  width: 100%;
+  height: 100vh;
+
+  padding: 1rem;
+  // opacity: 0;
+  display: none;
+
+  &__page {
+    max-width: 120rem;
+    min-height: 50rem;
+    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    grid-row: auto;
+  }
+
+  &__image {
+    // background-color: red;
+    height: 100%;
+    background-image: url(/image/undraw_visual_data_re_mxxo.svg);
+    background-size: contain;
+  }
+
+  &__label {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    // text-align: center;
+    // line-height: 1rem;
+    display: block;
+
+    font-family: "Open Sans", sans-serif;
+  }
+
+  &__terms {
+    font-size: 1.2rem;
+    font-family: inherit;
+    color: #696f73;
+  }
+}
+
+.form {
+  flex-grow: 1;
+
+  & > * {
+    width: 100%;
+  }
+
+  &__group {
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__label {
+    display: block;
+
+    margin-bottom: 0.5rem;
+    font-family: inherit;
+    font-size: 1.5rem;
+  }
+
+  &__input {
+    height: 3rem;
+    border: none;
+    border: 1px solid #696f73;
+    border-radius: 5px;
+    padding: 0.5rem;
+    display: block;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.3);
+    }
+
+    &::placeholder {
+      font-family: inherit;
+      font-size: 1.2rem;
+    }
+  }
+
+  &__btn {
+    height: 3.5rem;
+    background-color: #dd4f05;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 300;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #ce4a05;
+    }
+  }
+}
+
+//Account section
+.account {
+  max-width: 100rem;
+  margin: 4rem auto;
+
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  grid-template-rows: auto repeat(3, 15rem) auto;
+  grid-gap: 2rem;
+
+  &__details {
+    // background-color: aqua;
+    grid-column: 1 / -1;
+  }
+  // Design for the account balance
+
+  &__balance {
+    &-label {
+      font-size: 2rem;
+      color: black;
+      font-family: inherit;
+    }
+
+    &-date {
+      width: 25%;
+      background-color: #dd4f05;
+      color: white;
+      padding: 1rem;
+
+      font-family: inherit;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+
+    &-value {
+      font-family: inherit;
+      font-size: 2rem;
+    }
+  }
+
+  &__movements {
+    background-color: rgb(233, 233, 233);
+    border-radius: 1rem;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border: 1px solid #696f73;
+    grid-row: 2 / span 3;
+    overflow-y: scroll;
+    position: relative;
+
+    &-row {
+      width: 100%;
+      height: 6rem;
+      background-color: white;
+      border-bottom: 1px solid #ccc;
+      padding: 1rem 2rem;
+
+      // design of each movement
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-type {
+      padding: 0.5rem 1rem;
+      color: white;
+      font-size: 1rem;
+      font-weight: 500;
+      border-radius: 2rem;
+      text-transform: uppercase;
+
+      &--deposit {
+        background-image: linear-gradient(to top left, rgb(0, 255, 0), green);
+      }
+
+      &--withdrawal {
+        background-image: linear-gradient(
+          to top left,
+          rgb(255, 101, 101),
+          rgb(248, 0, 0)
+        );
+      }
+    }
+
+    &-date,
+    &-value {
+      color: #444;
+      font-size: 1.2rem;
+    }
+
+    &-value {
+      // color:#444;
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+  }
+
+  &__summary {
+    background-color: rgb(3, 90, 90);
+    grid-column: 1 / 2;
+  }
+
+  &__Operations {
+    // background-color: rgb(255, 234, 0);
+    grid-column: 2 / -1;
+    grid-row: 2 / -1;
+  }
+
+  &__transaction {
+    &-description {
+      height: 0rem;
+      border-bottom: 1px solid #dd4f05;
+      padding: 0 1rem;
+      font-size: 1.2rem;
+      background-color: white;
+      color: #444;
+      opacity: 0;
+      visibility: hidden;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transition: all 0.5s ease-out;
+
+      & > * {
+        display: block;
+        width: 100%;
+      }
+
+      &.active {
+        height: 5rem;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.banner {
+  width: 100%;
+  padding-right: 2rem;
+  background-color: #f3f3f3;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.account__Operations {
+  &--tabs {
+    height: 4rem;
+    width: 100%;
+    display: flex;
+
+    //background-color: #dd4f05;
+  }
+
+  &--content {
+    display: none;
+  }
+
+  &--active {
+    display: block;
+    padding: 2rem;
+  }
+
+  &--transfer {
+    height: calc(100% - 4rem);
+  }
+
+  &--Loan {
+    height: calc(100% - 4rem);
+  }
+
+  &--beneficiaries {
+    height: calc(100% - 4rem);
+    overflow-y: scroll;
+  }
+}
+
+.operation__tab {
+  height: inherit;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid transparent;
+  transition: all ease-out;
+
+  // &:hover {
+  //   border-bottom: 2px solid #dd4f05;
+  //   color: #dd4f05;
+  // }
+
+  &:not(:last-child) {
+    border-right: 1px solid #ccc;
+  }
+
+  flex-grow: 1;
+
+  &--active {
+    background-color: #dd4f05;
+    color: white;
+  }
+
+  &--text {
+    margin-right: 1rem;
+    font-weight: 600;
+    display: inline-block;
+  }
+}
