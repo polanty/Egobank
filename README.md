@@ -1,2 +1,2 @@
 # Weather_Application
-This application returns the Temperature readings of various cities around the globe
+This is a banking application built on design of a local bank in Nigeria (GTB)
